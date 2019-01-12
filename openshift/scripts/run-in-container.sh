@@ -33,7 +33,7 @@
 
 
 # Get name of a currently deployed pod by label and index
-POD_INSTANCE_NAME=`oc get pods \
+POD_INSTANCE_NAME=`oc --loglevel 9 get pods \
   -l "name=${POD_NAME:-django-psql}" \
   -t "{{ with index .items ${POD_INDEX:-0} }}{{ .metadata.name }}{{ end }}"`
 
