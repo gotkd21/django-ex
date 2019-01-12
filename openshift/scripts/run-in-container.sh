@@ -37,5 +37,7 @@ POD_INSTANCE_NAME=`oc --loglevel 9 get pods \
   -l "name=${POD_NAME:django-psql-persistent}" \
   -t "{{ with index .items ${POD_INDEX:-0} }}{{ .metadata.name }}{{ end }}"`
 
+ print(POD_INSTANCE_NAME)
+
 # Run command in a container of the specified pod:
 oc exec -p "$POD_INSTANCE_NAME" -it -- bash -c "${@:-echo}"
