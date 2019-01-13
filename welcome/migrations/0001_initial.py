@@ -18,6 +18,8 @@ class Migration(migrations.Migration):
                 ('timestamp', models.DateTimeField(auto_now_add=True)),
                 ('anothername', models.CharField(max_length=5)),
             ],
+        ),
+        migrations.CreateModel(
             name='Tracker',
             fields=[
                 ('timestamp', models.DateTimeField()),
