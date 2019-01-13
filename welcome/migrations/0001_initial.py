@@ -17,13 +17,5 @@ class Migration(migrations.Migration):
                 ('hostname', models.CharField(max_length=32)),
                 ('timestamp', models.DateTimeField(auto_now_add=True)),
             ],
-
-#            name='Tracker',
-#            fields=[
-#                ('timestamp', models.DateTimeField()),
-#                ('curlattitude', models.DecimalField(max_digits=6, decimal_places=3)),
-#                ('curlongtitude', models.DecimalField(max_digits=6, decimal_places=3)),
-#                ('currentpressure', models.DecimalField(max_digits=6, decimal_places=2)),
-#            ],
         ),
     ]
