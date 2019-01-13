@@ -16,7 +16,6 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', auto_created=True, serialize=False, primary_key=True)),
                 ('hostname', models.CharField(max_length=32)),
                 ('timestamp', models.DateTimeField(auto_now_add=True)),
-                ('anothername', models.CharField(max_length=5)),
             ],
 
 #            name='Tracker',
