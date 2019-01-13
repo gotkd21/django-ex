@@ -5,6 +5,7 @@ from django.http import HttpResponse
 
 from . import database
 from .models import PageView
+# from .models import Tracker
 
 # Create your views here.
 
