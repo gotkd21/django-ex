@@ -3,17 +3,13 @@
 import requests
 import time
 
-
-location = ""
-cur_time = int(time.time())
-time_req = ""
-
-print(cur_time)
-
 def get_weatherdata(location,time_req):
 
     # Define key Dictionaries
     bar_forecast = {}
+    location = ""
+    cur_time = int(time.time())
+    time_req = ""
 
     # Define API Call parameters
     WEATHERSITE = "https://api.darksky.net/"
@@ -34,20 +30,13 @@ def get_weatherdata(location,time_req):
         active_location_time = active_location + "," + str(time_req)
     # Get current forecast from API and return into json object
     cur_forecast = requests.get(WEATHERSITE + API_CALL + API_KEY + "/" + active_location_time + FLAGS)
-
     bar_forecast = cur_forecast.json()
 
     # Pull location data out of Forecast object
     loc_forecast = [bar_forecast['latitude'], bar_forecast['longitude']]
     pressure_current = [bar_forecast['currently']['time'],bar_forecast['currently']['pressure']]
 
-    print(loc_forecast, " ", pressure_current)
-
-
-    print(type(bar_forecast['hourly']), type(bar_forecast['hourly']['data']))
-
 
 #    for fcast in bar_forecast['hourly']['data']:
 #        print(fcast['time'], " ", fcast['pressure'])
-
-return(bar_forecast['hourly']['data'])
+    return bar_forecast['hourly']['data']
