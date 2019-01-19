@@ -231,8 +231,9 @@ pre {
           </section>
           <pre>
           <h2>Weather Data:<h2>
+              <body>
               {% for h in wdata %}
-                {{ wdata }}
+                {{ wdata.time() }}
               {% endfor %}
           </pre>
 
