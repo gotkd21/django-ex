@@ -233,8 +233,8 @@ pre {
           <h2>Weather Data:<h2>
               <body>
 
-             {% for h in wdata %}
-                {{% h %}}
+             {% for forcst in wdata %}
+                {{ forcst }}
                 {% endfor %}
 </body>
           </pre>
