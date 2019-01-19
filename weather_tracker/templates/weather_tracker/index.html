@@ -232,11 +232,9 @@ pre {
              {% for forcst in wdata %}
                 {% for h in forcst %}
                     {% if forloop.counter == 1 %}
-                        <th>
                         {% for key,value in h.items %}
-                            <td>{{key}}</td>
+                            <th>{{key}}</th>
                         {% endfor %}
-                    </th>
                     {% endif %}
                 <tr>
                     {% for key,value in h.items %}
