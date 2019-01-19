@@ -33,10 +33,17 @@ def get_weatherdata(location,time_req):
     bar_forecast = cur_forecast.json()
 
     # Pull location data out of Forecast object
-    loc_forecast = [bar_forecast['latitude'], bar_forecast['longitude']]
-    pressure_current = [bar_forecast['currently']['time'],bar_forecast['currently']['pressure']]
+    #loc_forecast = [bar_forecast['latitude'], bar_forecast['longitude']]
+    #pressure_current = [bar_forecast['currently']['time'],bar_forecast['currently']['pressure']]
+
+    #hourly_pressure = {}
+    #hourly_pressure = [bar_forecast['hourly']['data'][0]]
+    #print(type(hourly_pressure), type(hourly_pressure[0]))
+
+    #print(hourly_pressure[0])
 
 
-#    for fcast in bar_forecast['hourly']['data']:
-#        print(fcast['time'], " ", fcast['pressure'])
-    return bar_forecast['hourly']['data']
+
+    #for fcast in bar_forecast['hourly']['data']:
+    #    print(fcast['time'], " ", fcast['pressure'])
+    return bar_forecast['hourly']['data'][0]
