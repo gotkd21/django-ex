@@ -18,7 +18,7 @@ from django.http import HttpResponse
 # class WeatherPage(generic.Templateview):
 def index(request):
     weather_data = get_weatherdata(cur_location,cur_time)
-    return render(request, 'index.html', {
+    return render(request, 'weather_tracker/index.html', {
         'wdata': weather_data[0]['pressure']
     })
 
