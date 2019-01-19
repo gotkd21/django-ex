@@ -234,12 +234,18 @@ pre {
               <table>
 
              {% for forcst in wdata %}
+
                 {% for h in forcst %}
+                <tr><th>
+                    {% for key,value in h.items.0% }
+                        <td>{{key}}</td>
+                    {% endfor %}
+                </tr>
                 <tr>
                     {% for key,value in h.items %}
-                        <td><a href="{{key}}">{{value}}</a></td>
+                        <td>{{value}}</td>
                     {% endfor %}
-                </tr>                            
+                </tr>
                 {% endfor %}
             {% endfor %}
 
