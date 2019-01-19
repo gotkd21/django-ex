@@ -233,7 +233,7 @@ pre {
                 {% for h in forcst %}
                     {% if forloop.counter == 1 %}
                         {% for key,value in h.items %}
-                            <th><p class="capitalize">"{{key}}"</p></th>
+                            <th>{{key|title}}</th>
                         {% endfor %}
                     {% endif %}
                 <tr>
