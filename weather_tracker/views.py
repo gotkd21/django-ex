@@ -5,7 +5,7 @@ from django.conf import settings
 
 # from weather_tracker.forms import weatherdata
 #from services import get_weatherdata
-import weather_tracker.services
+import .services
 import time
 
 cur_time = int(time.time())
@@ -16,7 +16,7 @@ from django.http import HttpResponse
 # This is the new class created based on the direction on https://stackoverflow.com/questions/30259452/proper-way-to-consume-data-from-restful-api-in-django
 # there are problems with the definition of the class.
 # class WeatherPage(generic.Templateview):
-def index(request):
+def index(request,cur_time,cur_location):
     weather_data = get_weatherdata(cur_location,cur_time)
     return render(request, 'index.html', {
         'wdata': weather_data[0][pressure]
