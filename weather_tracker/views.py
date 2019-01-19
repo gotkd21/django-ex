@@ -43,4 +43,4 @@ def getw(request):
 
 # This is the original static page view creation
 # def index(request):
-    return render(request, 'weather_tracker/index.html')
+#    return render(request, 'weather_tracker/index.html')
