@@ -235,10 +235,12 @@ pre {
 
              {% for forcst in wdata %}
                 {% for h in forcst %}
-                    {{ h }}
+                    {% for key,value in h.items %}
+                        <li><a href="{{key}}">{{value}}</a></li>
+                    {% endfor %}                        
                 {% endfor %}
             {% endfor %}
-            
+
 </body>
           </pre>
 
