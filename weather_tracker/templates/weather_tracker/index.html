@@ -231,17 +231,19 @@ pre {
           </section>
           <pre>
           <h2>Weather Data:<h2>
-              <body>
+              <table>
 
              {% for forcst in wdata %}
                 {% for h in forcst %}
+                <tr>
                     {% for key,value in h.items %}
-                        <li><a href="{{key}}">{{value}}</a></li>
-                    {% endfor %}                        
+                        <td><a href="{{key}}">{{value}}</a></td>
+                    {% endfor %}
+                </tr>                            
                 {% endfor %}
             {% endfor %}
 
-</body>
+</table>
           </pre>
 
           </section>
