@@ -5,7 +5,7 @@ from django.conf import settings
 
 # from weather_tracker.forms import weatherdata
 #from services import get_weatherdata
-import .services
+from .services import get_weatherdata
 import time
 
 cur_time = int(time.time())
