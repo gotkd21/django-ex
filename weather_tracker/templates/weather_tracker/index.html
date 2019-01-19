@@ -232,6 +232,7 @@ pre {
           <pre>
           <h2>Weather Data:<h2>
               <body>
+            {% load dict_extras}
               {% for h in wdata %}
                 {{ wdata|access:h }}
               {% endfor %}
