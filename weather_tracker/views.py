@@ -19,7 +19,7 @@ from django.http import HttpResponse
 def index(request):
     weather_data = get_weatherdata(cur_location,cur_time)
     return render(request, 'weather_tracker/index.html', {
-        'wdata': weather_data
+        'wdata': weather_data['pressure']
     })
 
 # Create your views here.
