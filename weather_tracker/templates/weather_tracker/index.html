@@ -234,8 +234,11 @@ pre {
               <body>
 
              {% for forcst in wdata %}
-                {{ forcst }}
+                {% for h in forcst %}
+                    {{ h }}
                 {% endfor %}
+            {% endfor %}
+            
 </body>
           </pre>
 
