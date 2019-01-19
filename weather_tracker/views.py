@@ -16,11 +16,11 @@ from django.http import HttpResponse
 # This is the new class created based on the direction on https://stackoverflow.com/questions/30259452/proper-way-to-consume-data-from-restful-api-in-django
 # there are problems with the definition of the class.
 # class WeatherPage(generic.Templateview):
-    def getw(request):
-        weather_data = services.get_weatherdata(cur_location,cur_time)
-        return render(request, 'index.html', {
-            wdata = weather_data[0]
-        })
+def getw(request):
+    weather_data = services.get_weatherdata(cur_location,cur_time)
+    return render(request, 'index.html', {
+        wdata = weather_data[0]
+    })
 
 # Create your views here.
 
