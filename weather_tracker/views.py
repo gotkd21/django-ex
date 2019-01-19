@@ -17,7 +17,7 @@ from django.http import HttpResponse
 # there are problems with the definition of the class.
 # class WeatherPage(generic.Templateview):
 def index(request):
-    weather_data = weather_tracker.get_weatherdata(cur_location,cur_time)
+    weather_data = get_weatherdata(cur_location,cur_time)
     return render(request, 'index.html', {
         'wdata': weather_data[0][pressure]
     })
