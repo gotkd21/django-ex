@@ -35,7 +35,7 @@ def get_weatherdata(location,time_req):
     cur_forecast = requests.get(WEATHERSITE + API_CALL + API_KEY + "/" + active_location_time + FLAGS)
     bar_forecast = cur_forecast.json()
 
-    print(bar_forecast)
+    print(bar_forecast['hourly']['data'])
     forecast_loc = {}
     forecast_loc = {'latitude': bar_forecast['latitude'], 'longitude': bar_forecast['longitude']}
     print(forecast_loc)
