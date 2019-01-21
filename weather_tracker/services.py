@@ -6,7 +6,7 @@ import time
 
 def get_weatherdata(location,time_req):
 
-    darkskyattributes = {'time':0,'summary':"",'precipIntensity':0,'precipProbability':0,'precipAccumulation':0,'precipType':"",'temperature':999,'apparentTemperature':999,'dewPoint':100,'humidity':999,'pressure':9999,'uvIndex':999,'visibility':999,'ozone':""}
+    darkskyattributes = {'time':0,'summary':"",'icon':"",'precipIntensity':0,'precipProbability':0,'precipAccumulation':0,'precipType':"",'temperature':999,'apparentTemperature':999,'dewPoint':100,'humidity':999,'pressure':9999,'uvIndex':999,'visibility':999,'ozone':""}
 
     # Define key Dictionaries
     bar_forecast = {}
