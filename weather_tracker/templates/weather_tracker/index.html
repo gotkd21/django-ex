@@ -228,10 +228,10 @@ pre {
           <pre>
           <h2>Weather Data:</h2>
               <table>
-
+{% comment %}
              {% for forcst in wdata %}
-                <td>{{forcst}}</td>
-                {% for h in forcst %}
+{% endcomment %}
+                {% for h in wdata %}
                     {% if forloop.counter == 1 %}
                         {% for key,value in h.items %}
                             <th>{{key|title}}</th>
@@ -243,8 +243,9 @@ pre {
                     {% endfor %}
                 </tr>
                 {% endfor %}
+{% comment %}
             {% endfor %}
-
+{% endcomment %}
 </table>
           </pre>
 
