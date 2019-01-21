@@ -230,7 +230,7 @@ pre {
               <table>
 
              {% for forcst in wdata %}
-                <td>forcst</td>
+                <td>{{forcst}}</td>
                 {% for h in forcst %}
                     {% if forloop.counter == 1 %}
                         {% for key,value in h.items %}
