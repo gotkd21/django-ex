@@ -56,7 +56,7 @@ def get_weatherdata(location,time_req):
             else:
                 hourly_pressure[x]=fcast[x]
         hourly_data.append(hourly_pressure)
-    print(hourly_data)
+    #print(hourly_data)
 
 
 #        print(fcast['time'], " ", fcast['pressure'])
@@ -64,7 +64,7 @@ def get_weatherdata(location,time_req):
     # hourly_pressure = [bar_forecast['hourly']['data']]
 #    print(type(hourly_pressure), type(hourly_pressure[0]))
 
-    #print(hourly_data)
+    print(hourly_data)
 
 
 
