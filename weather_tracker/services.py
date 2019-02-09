@@ -6,6 +6,9 @@ import time
 
 def get_weatherdata(location,time_req):
 
+    # define dictionary of all weather response attributes this applicatin tracksself.
+    # these match the names of the data object in the return response from darksky
+
     darkskyattributes = {'time':0,'summary':"",'icon':"",'precipIntensity':0,'precipProbability':0,'precipAccumulation':0,'precipType':"",'temperature':999,'apparentTemperature':999,'dewPoint':100,'humidity':999,'pressure':9999,'uvIndex':999,'visibility':999,'ozone':""}
 
     # Define key Dictionaries
@@ -20,8 +23,10 @@ def get_weatherdata(location,time_req):
     API_KEY = "4c8784bca3dd0691b9b516c8bdea1734"
     FLAGS = "?exclude=[minutely,alerts,flags]"
     API_CALL = "forecast/"
+    dsheaders = {'Accept-Encoding': 'gzip'}
 
     #set active_location
+    # this logic may have to change when actually accepting input from device or user
     if len(location) < 2:
         active_location = default_location
     else:
@@ -31,11 +36,12 @@ def get_weatherdata(location,time_req):
         active_location_time = active_location + "," + str(cur_time)
     else:
         active_location_time = active_location + "," + str(time_req)
+
     # Get current forecast from API and return into json object
-    cur_forecast = requests.get(WEATHERSITE + API_CALL + API_KEY + "/" + active_location_time + FLAGS)
+    cur_forecast = requests.get(WEATHERSITE + API_CALL + API_KEY + "/" + active_location_time + FLAGS, headers=dsheaders)
+    print(cur_forecast)
     bar_forecast = cur_forecast.json()
 
-    print(bar_forecast['hourly']['data'])
     forecast_loc = {}
     forecast_loc = {'latitude': bar_forecast['latitude'], 'longitude': bar_forecast['longitude']}
     print(forecast_loc)
