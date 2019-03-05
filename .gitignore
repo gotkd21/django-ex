@@ -1,3 +1,6 @@
+# dev tool config
+.vscode/
+
 # Django
 db.sqlite3
 staticfiles/

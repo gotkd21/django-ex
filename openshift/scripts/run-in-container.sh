@@ -15,7 +15,7 @@
 
 # Usage examples:
 #
-#     ./run-in-container.sh ./manage.py migrate
+./run-in-container.sh ./manage.py migrate
 #     ./run-in-container.sh ./manage.py createsuperuser
 #     ./run-in-container.sh ./manage.py shell
 #

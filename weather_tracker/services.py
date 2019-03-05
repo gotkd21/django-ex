@@ -48,10 +48,17 @@ def get_weatherdata(location,time_req):
     # Pull location data out of Forecast object
     #loc_forecast = [bar_forecast['latitude'], bar_forecast['longitude']]
     #pressure_current = [bar_forecast['currently']['time'],bar_forecast['currently']['pressure']]
+
+    # Initialize hourly_data as a list.
     hourly_data = []
 
     #print(type(bar_forecast['hourly']['data']))
     #print(bar_forecast['hourly']['data'])
+
+    # Loop through all 'hourly' results from the API call to collect/format results into standardized
+    # set of attributes.  Since darkskyapi does not always return all attributes, must set
+    # default attributes if the data field has not been returned
+
     for fcast in bar_forecast['hourly']['data']:
         #fcast = bar_forecast['hourly']['data'][0]
         # print(fcast)
